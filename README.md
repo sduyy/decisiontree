@@ -31,10 +31,14 @@ C++ implementation of a supervised Decision Tree classifier from scratch, focusi
 
 ```bash
 # Build (recommended)
-g++ -std=c++17 -g _mainmodel.cpp -o _mainmodel.exe
+g++ -std=c++17 -g src/_mainmodel.cpp -o bin/_mainmodel.exe
 
 # Or use MSYS2 g++ explicit path:
-# D:\msys2\ucrt64\bin\g++.exe -std=c++17 -g _mainmodel.cpp -o _mainmodel.exe
+# D:\msys2\ucrt64\bin\g++.exe -std=c++17 -g src/_mainmodel.cpp -o bin/_mainmodel.exe
+
+# Data files live in `data/` (train.csv, test.csv, treesave.txt)
+# Executable says:
+# ./bin/_mainmodel.exe      # reads data/test.csv and data/treesave.txt and writes data/predict.txt
 ```
 
 ## Train (uncomment in main()):

@@ -47,7 +47,7 @@ vector<csvData> loadTrainData(const string &fileName)
 
     if (!file.is_open())
     {
-        std::filesystem::path alt = std::filesystem::path("decisiontree") / fileName;
+        std::filesystem::path alt = std::filesystem::path("data") / fileName;
         if (std::filesystem::exists(alt))
         {
             file.open(alt.string());
@@ -90,7 +90,7 @@ vector<csvData> loadTestData(const string &fileName)
 
     if (!file.is_open())
     {
-        std::filesystem::path alt = std::filesystem::path("decisiontree") / fileName;
+        std::filesystem::path alt = std::filesystem::path("data") / fileName;
         if (std::filesystem::exists(alt))
         {
             file.open(alt.string());
@@ -348,6 +348,12 @@ void saveTree(TreeNode *root, ofstream &file)
 void saveDecisionTree(TreeNode *root, const string &filename)
 {
     ofstream file(filename);
+    if (!file.is_open())
+    {
+        std::filesystem::path alt = std::filesystem::path("data") / filename;
+        file.open(alt.string());
+    }
+
     if (file.is_open())
     {
         saveTree(root, file);
@@ -389,7 +395,7 @@ TreeNode *loadDecisionTree(const string &filename)
     ifstream file(filename);
     if (!file.is_open())
     {
-        std::filesystem::path alt = std::filesystem::path("decisiontree") / filename;
+        std::filesystem::path alt = std::filesystem::path("data") / filename;
         if (std::filesystem::exists(alt))
         {
             file.open(alt.string());
@@ -435,6 +441,12 @@ string predict(TreeNode *root, const csvData &sample)
 void savePredictions(const vector<string> &predictions, const string &fileName)
 {
     ofstream file(fileName);
+    if (!file.is_open())
+    {
+        std::filesystem::path alt = std::filesystem::path("data") / fileName;
+        file.open(alt.string());
+    }
+
     if (file.is_open())
     {
         for (int id = 1; id <= predictions.size(); ++id)
@@ -446,7 +458,7 @@ void savePredictions(const vector<string> &predictions, const string &fileName)
     }
     else
     {
-        cout << "Unable to open file for savingx predictions" << endl;
+        cout << "Unable to open file for saving predictions" << endl;
     }
 }
 
