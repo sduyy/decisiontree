@@ -52,14 +52,3 @@ buildTree(trainData, maxDepth, maxLeafNodes, ..., minSamplesSplit, minSamplesLea
 ```cpp
 loadDecisionTree("treesave.txt");
 ```
-
-## What I Learned
-
-- Internal mechanics of decision trees
-- Overfitting control via pre-pruning
-- Recursive tree structures in C++
-
-## Tech
-
-C++ · Supervised Learning · Decision Trees
-
