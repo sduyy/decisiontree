@@ -1,0 +1,82 @@
+======================================================================
+DECISION TREE COMPARISON: Custom C++ vs sklearn
+======================================================================
+
+Dataset Info:
+  Train samples: 532
+  Test samples: 93
+  Features: ['a', 'b', 'c', 'd']
+  Classes: ['B', 'L', 'R']
+
+======================================================================
+SKLEARN DECISION TREE
+======================================================================
+
+Training Accuracy: 1.0000
+  (Correct: 532 / 532)
+
+Tree Properties:
+  Tree depth: 10
+  Number of leaves: 135
+  Total nodes: 269
+
+Feature Importance:
+  a: 0.2282
+  b: 0.2729
+  c: 0.2662
+  d: 0.2327
+
+Test Predictions (first 10):
+ ID Label_sklearn
+  1             B
+  2             R
+  3             R
+  4             R
+  5             B
+  6             R
+  7             R
+  8             R
+  9             R
+ 10             L
+
+======================================================================
+CUSTOM C++ DECISION TREE
+======================================================================
+
+Test Predictions (first 10):
+  1: B
+  2: R
+  3: R
+  4: R
+  5: B
+  6: R
+  7: R
+  8: R
+  9: R
+  10: L
+
+======================================================================
+COMPARISON: Predictions Match Analysis
+======================================================================
+
+Matching predictions: 78 / 93 (83.87%)
+
+Differences found: 15
+
+Index    sklearn      Your C++    
+--------------------------------
+11       B            L           
+17       L            B           
+19       L            R           
+23       B            R           
+24       B            R           
+47       L            R           
+52       B            R           
+53       B            R           
+59       B            L           
+65       L            R           
+71       L            R           
+77       L            R           
+80       B            L           
+85       B            R           
+92       L            R           
