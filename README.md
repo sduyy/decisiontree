@@ -58,7 +58,7 @@ g++ -g -std=c++17 src/_mainmodel.cpp -o bin/_mainmodel.exe
 .\bin\_mainmodel.exe
 
 # Then run the comparison script
-python src/compare_trees_report.py
+python src/compare_trees.py
 ```
 
 ### What the Comparison Shows
