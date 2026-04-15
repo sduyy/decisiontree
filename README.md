@@ -30,7 +30,7 @@ C++ implementation of a supervised Decision Tree classifier from scratch, focusi
 ## Run
 
 ```bash
-# Build and Run (recommended)
+# Build and run
 g++ -g -std=c++17 src/_mainmodel.cpp -o bin/_mainmodel.exe; .\bin\_mainmodel.exe
 ```
 
@@ -53,7 +53,7 @@ loadDecisionTree("treesave.txt");
 Compare the C++ decision tree with scikit-learn's implementation:
 
 ```bash
-# First, build and run the C++ tree to generate predictions
+# Build and run the C++ tree first to generate predictions
 g++ -g -std=c++17 src/_mainmodel.cpp -o bin/_mainmodel.exe
 .\bin\_mainmodel.exe
 
@@ -63,7 +63,7 @@ python src/compare_trees.py
 
 ### What the Comparison Shows
 
-The script (`src/compare_trees_report.py`) generates a detailed report (`comparison_report.txt`) that includes:
+The script (`src/compare_trees.py`) generates a detailed report (`comparison_report.txt`) that includes:
 
 - **sklearn Training Accuracy**: Default sklearn tree (usually 100% - overfits)
 - **Tree Properties**: Depth, number of leaves, feature importance
