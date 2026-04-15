@@ -30,8 +30,8 @@ C++ implementation of a supervised Decision Tree classifier from scratch, focusi
 ## Run
 
 ```bash
-# Build (recommended)
-g++ -std=c++17 -g src/_mainmodel.cpp -o bin/_mainmodel.exe
+# Build and Run (recommended)
+g++ -g -std=c++17 src/_mainmodel.cpp -o bin/_mainmodel.exe; .\bin\_mainmodel.exe
 
 # Or use MSYS2 g++ explicit path:
 # D:\msys2\ucrt64\bin\g++.exe -std=c++17 -g src/_mainmodel.cpp -o bin/_mainmodel.exe

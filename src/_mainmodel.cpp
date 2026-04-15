@@ -478,7 +478,7 @@ int main()
         cout << predicted << endl;
         predictions.push_back(predict(decisionTree, sample));
     }
-    savePredictions(predictions, "predict.txt");
+    savePredictions(predictions, "data/predict.txt");
 
     // printTree(decisionTree);
 
